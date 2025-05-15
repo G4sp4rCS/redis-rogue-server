@@ -8,15 +8,16 @@ ifndef RMUTIL_LIBDIR
 endif
 
 ifndef SRC_DIR
-	SRC_DIR=example
+	SRC_DIR=exp
 endif
+
 
 
 all: module.so
 
 module.so:
 	$(MAKE) -C ./$(SRC_DIR)
-	cp ./$(SRC_DIR)/module.so .
+	cp ./exp/exp.so ./module.so
 
 clean: FORCE
 	rm -rf *.xo *.so *.o
